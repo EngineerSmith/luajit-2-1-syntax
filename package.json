@@ -2,13 +2,13 @@
   "name": "luajit-2-1-syntax",
   "displayName": "LuaJIT 2.1 Syntax",
   "description": "Adds syntax highlighting for extra LuaJIT keywords and operators.",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "publisher": "EngineerSmith",
   "repository": {
     "type": "git",
     "url": "https://github.com/EngineerSmith/luajit-2-1-syntax"
   },
-  "engines": { "vscode": "^1.80.0" },
+  "engines": { "vscode": "^1.43.0" },
   "categories": [ "Programming Languages" ],
   "contributes": {
     "grammars": [
