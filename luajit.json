@@ -29,7 +29,7 @@
     },
     {
       "_comment": "Logical operators",
-      "match": "&&|\\|\\||!(?!=)",
+      "match": "&&|\\|\\|(?!\\s*->)|!(?!=)",
       "name": "keyword.operator.lua"
     },
     {

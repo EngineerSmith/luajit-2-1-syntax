@@ -22,6 +22,8 @@ local add = |a, b| -> a + b
 local square = |x| -> x * x
 assert(add(3, square(4)) == 19)
 
+const helloWorldLambda = || -> "hello world"
+
 -- const scoping
 const MAX_RETRIES = 3
 -- MAX_RETRIES = 5 -- throws error
