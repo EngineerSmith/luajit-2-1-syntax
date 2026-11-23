@@ -16,5 +16,3 @@ Built for the Löve community ♡, though it works across any Lua codebase.
 
 ### Why no lambda highlighting?
 `->` already highlights as `-` and `>`, while `|a, b|` pipes are left unstyled rather than colored as operators (as they aren't operators and bracket matching scope behaviour isn't configured for them yet).
-
-Personal Notes to follow up: https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#configure-bracket-matching-scopes
