@@ -1,0 +1,43 @@
+name: Bump version and publish extension
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: "Version bump type"
+        required: true
+        default: "patch"
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      - name: Configure git for version bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump version & push tag
+        run: |
+          npm version ${{ github.event.inputs.bump }} -m "action(publish): %s"
+          git push origin main --follow-tags
+
+      - name: Package and publish
+        run: npx @vscode/vsce@latest publish --oidc
