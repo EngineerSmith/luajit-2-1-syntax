@@ -7,10 +7,12 @@ Adds syntax highlighting for for LuaJIT's 2.1 keywords, operators, and numeric l
 - Keywords `const`, `continue`
 - Operators `??`, `?.`, ternary (`?`/`:`), `&&`, `||`, `!`, `~`, `&`
 - Numeric Literals `0b...`, underscore separators (`1_000_000`, `0xFF_80`, `0b1010_1010`), suffices (`LL`, `ULL`)
-- Library `jit` `bit` `debug` (matching `math` behaviour)
+- Library `jit`, `bit`, `debug` (matching `math` behaviour)
 
 ## Compatibility
 This extension adds regex rules on top of VS Code's existing Lua (`source.lua`) grammar rather than replacing it. Because it uses standard TextMate scopes, it works with existing Lua themes (exact color depends on your active theme).
+
+Even if your LuaJIT version doesn't support every newer syntax feature or literal, other features like library highlighting (`jit`, etc.) can still be useful.
 
 Built for the Löve community ♡, though it works across any Lua codebase. 
 

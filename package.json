@@ -4,6 +4,7 @@
   "description": "Adds syntax highlighting for extra LuaJIT keywords and operators.",
   "version": "1.0.0",
   "publisher": "EngineerSmith",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/EngineerSmith/luajit-2-1-syntax"
