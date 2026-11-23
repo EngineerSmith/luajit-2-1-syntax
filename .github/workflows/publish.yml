@@ -34,10 +34,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Bump version & push tag
-        run: |
-          npm version ${{ github.event.inputs.bump }} -m "action(publish): %s"
-          git push origin main --follow-tags
+      - name: Bump version
+        run: 'npm version ${{ github.event.inputs.bump }} -m "action(publish): %s"'
 
       - name: Package and publish
         run: npx @vscode/vsce@latest publish --oidc
+
+      - name: Push bumped commit
+        run: git push origin main --follow-tags
