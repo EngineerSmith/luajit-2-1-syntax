@@ -1,0 +1,61 @@
+{
+  "scopeName": "source.lua.luajit",
+  "injectionSelector": "L:source.lua -comment -string",
+  "patterns": [
+    {
+      "_comment": "const declaration keyword",
+      "match": "(?<!\\.)\\bconst\\b(?=\\s+[A-Za-z_])",
+      "name": "keyword.local.lua"
+    },
+    {
+      "_comment": "continue loop control keyword",
+      "match": "(?<!\\.)\\bcontinue\\b",
+      "name": "keyword.control.lua"
+    },
+    {
+      "_comment": "Nil-coalescing and optional chaining",
+      "match": "\\?\\?|\\?\\.",
+      "name": "keyword.operator.lua"
+    },
+    {
+      "_comment": "Ternary conditional operator",
+      "match": "\\?",
+      "name": "keyword.operator.lua"
+    },
+    {
+      "_comment": "Ternary conditional colon",
+      "match": "(?<!:):(?!:|\\s*[A-Za-z_][A-Za-z0-9_]*\\s*[({\"'])",
+      "name": "keyword.operator.lua"
+    },
+    {
+      "_comment": "Logical operators",
+      "match": "&&|\\|\\||!(?!=)",
+      "name": "keyword.operator.lua"
+    },
+    {
+      "_comment": "Bitwise operators",
+      "match": "~(?!=)|&",
+      "name": "keyword.operator.lua"
+    },
+    {
+      "_comment": "Binary integer literals with optional underscores",
+      "match": "\\b0[bB][01]+(?:_[01]+)*(?i:(?:ull|ll))?\\b",
+      "name": "constant.numeric.lua"
+    },
+    {
+      "_comment": "Underscore separators and trailing digits suffixes",
+      "match": "(?<=[0-9A-Fa-f])_[0-9A-Fa-f]+",
+      "name": "constant.numeric.float.lua"
+    },
+    {
+      "_comment": "64-bit integer suffixes",
+      "match": "(?<=[0-9A-Fa-f])(?i:(?:ull|ll))\\b",
+      "name": "constant.numeric.lua"
+    },
+    {
+      "_comment": "LuaJIT built-in library members (matches math behaviour)",
+      "match": "\\b(?:jit|bit|debug)\\.[A-Za-z_][A-Za-z0-9_]*\\b",
+      "name": "support.function.library.lua"
+    }
+  ]
+}
