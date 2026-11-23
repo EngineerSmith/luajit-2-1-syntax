@@ -56,6 +56,16 @@
       "_comment": "LuaJIT built-in library members (matches math behaviour)",
       "match": "\\b(?:jit|bit|debug)\\.[A-Za-z_][A-Za-z0-9_]*\\b",
       "name": "support.function.library.lua"
+    },
+    {
+      "_comment": "Optional chain colon table matching normal colon table function caller",
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\?\\.\\s*:)",
+      "name": "entity.name.class.lua"
+    },
+    {
+      "_comment": "Method identifier after optional chain",
+      "match": "(?<=\\?\\.\\s*:\\s*|\\?\\.\\s*)[A-Za-z_][A-Za-z0-9_]*\\b",
+      "name": "support.function.any-method.lua"
     }
   ]
 }
