@@ -64,7 +64,7 @@
     },
     {
       "_comment": "Method identifier after optional chain",
-      "match": "(?<=\\?\\.\\s*:\\s*|\\?\\.\\s*)[A-Za-z_][A-Za-z0-9_]*\\b",
+      "match": "(?<=\\?\\.\\s*:\\s*|\\?\\.\\s*)[A-Za-z_][A-Za-z0-9_]*(?=\\s*(?:\\?\\.\\s*)?\\()",
       "name": "support.function.any-method.lua"
     }
   ]
